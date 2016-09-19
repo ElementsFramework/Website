@@ -1199,18 +1199,6 @@ strong {
   color: #222324;
   font-weight: 700; }
 
-pre {
-  background-color: #f5f7fa;
-  color: #69707a;
-  white-space: pre;
-  word-wrap: normal; }
-  pre code {
-    background-color: #f5f7fa;
-    color: #69707a;
-    display: block;
-    overflow-x: auto;
-    padding: 16px 20px; }
-
 table {
   width: 100%; }
   table td,
