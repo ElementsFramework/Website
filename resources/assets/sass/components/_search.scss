@@ -1,0 +1,33 @@
+.search {
+  background-color: $grey-lighter;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 20px 30px;
+
+  svg { margin-right: 15px; }
+
+  .twitter-typeahead {
+    height:     100%;
+    width:      100%;
+    direction:  ltr;
+    display:    inline-block;
+    position:   relative;
+
+    input {
+      background-color: $grey-lighter;
+      display: inline-block;
+      border: none;
+      flex: 1;
+      height: 50px !important;
+      &:focus { outline: none; }
+
+      &::placeholder {
+        font-family: $font_alt;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}

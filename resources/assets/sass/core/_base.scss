@@ -1,25 +1,5 @@
-* { box-sizing: border-box; }
-
-body {
-	color: $color__gray;
-	font-family: $font;
-	font-size: 16px;
-	background: #fff url('/assets/img/cloud-bar.png') repeat-x;
-	padding-top: 15px;
-}
-
 h1, h2, h3, h4 {
 	-webkit-font-smoothing: antialiased;
-}
-
-.container {
-	max-width: 1080px;
-	margin: 0 auto;
-}
-
-a {
-	color: $color__salmon;
-	text-decoration: none;
 }
 
 h1 {
@@ -40,7 +20,7 @@ p {
 
 p code {
 	background: $color__faint;
-	color: $color__salmon;
+	color: $color__primary;
 	padding: 1px 5px;
 	border-radius: 3px;
 }
@@ -51,7 +31,7 @@ code, kbd, pre, samp {
 }
 
 blockquote {
-	background: $color__salmon;
+	background: $color__primary;
 	color: #fff;
 	border-radius: 3px;
 	margin: 10px 0 20px;
@@ -59,24 +39,4 @@ blockquote {
 
     p:last-child { margin: 0; }
 	a { color: #fff; }
-}
-
-.items-wrapper {
-    @include clearfix;
-    margin: 0 -15px 30px -15px;
-}
-
-.third {
-    position: relative;
-    min-height: 1px;
-    margin-right: 15px;
-    margin-left: 15px;
-    flex-basis: 33.333333%;
-}
-
-
-@media all and (max-width: 800px) {
-    .third {
-        flex-basis: 100%;
-    }
 }

@@ -15,7 +15,7 @@ function markdown($text)
 
 Route::get('/', function () {
     return view('marketing')->with(['currentVersion' => DEFAULT_VERSION]);
-});
+})->name('home');
 
 Route::get('docs', 'DocsController@showRootPage');
 Route::get('docs/{version}/{page?}', 'DocsController@show');

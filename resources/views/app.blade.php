@@ -4,9 +4,8 @@
 	<meta charset="utf-8">
 	<title>{{ isset($title) ? $title . ' - ' : null }}Elements Framework - Solve problems once</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="author" content="Taylor Otwell">
-	<meta name="description" content="Laravel - The PHP framework for web artisans.">
-	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="author" content="Igor Rinkovec">
+	<meta name="description" content="Elements Framework provides tools for developers to deliver easy to use drag-and-drop CMS functionalities to the client without sacrificing any custom implementation ability or website performance.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	@if (isset($canonical))
 		<link rel="canonical" href="{{ url($canonical) }}" />
@@ -14,7 +13,8 @@
 	<!--[if lte IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-    <link href='https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Source+Sans+Pro:200,400,700,600,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,600,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
 	<link rel="apple-touch-icon" href="/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
@@ -23,37 +23,49 @@
 
 	<span class="overlay"></span>
 
-	<nav class="main">
-		<a href="/" class="brand nav-block">
-			{!! svg('logo') !!}
-		</a>
+	<nav class="nav">
+		<div class="container">
+			<div class="nav-left">
+				<a class="nav-item is-brand" href="{{ route('home')  }}">
+					{!! svg('logo') !!}
+				</a>
+			</div>
 
-		<ul class="main-nav" v-if="! search">
-			@include('partials.main-nav')
-		</ul>
+			<span class="nav-toggle toggle-slide">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
 
-        <div class="search nav-block">
-            {!! svg('search') !!}
-            <input placeholder="search" type="text" v-model="search" id="search-input" v-on:blur="reset" />
-        </div>
-
-
-        @if (Request::is('docs*') && isset($currentVersion))
-			@include('partials.switcher')
-		@endif
-
-        <div class="responsive-sidebar-nav">
-			<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="https://github.com/ElementsFramework">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				@include('partials.main-nav')
+				<span class="nav-item">
+					<a class="button is-primary" href="/docs/master">
+						<span class="icon">
+							<i class="fa fa-download"></i>
+						</span>
+						<span>Installation</span>
+					</a>
+				</span>
+				@if(false)
+					@if (Request::is('docs*') && isset($currentVersion))
+						@include('partials.switcher')
+					@endif
+				@endif
+			</div>
 		</div>
 	</nav>
 
+
 	@yield('content')
 
-	<footer class="main">
-		<ul>
-			@include('partials.main-nav')
-		</ul>
-		<p>elements.sethera.tech is based on laravel.com. Copyright &copy; <a href="http://taylorotwell.com/" target="_BLANK">Taylor Otwell</a> and <a href="http://jackmcdade.com" target="_BLANK">Jack McDade</a>.</p>
+	<footer class="footer has-text-centered">
+		<p>Copyright &copy; <a href="http://igor-rinkovec.from.hr" target="_BLANK">Igor Rinkovec</a>.</p>
 	</footer>
 
 	<script>
@@ -67,15 +79,14 @@
 	@include('partials.algolia_template')
 
 	<script src="{{ elixir('assets/js/laravel.js') }}"></script>
-	<script src="/assets/js/viewport-units-buggyfill.js"></script>
-	<script>window.viewportUnitsBuggyfill.init();</script>
 	<script>
-		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
-		(function(d,t){
-			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)
-		}(document,'script'));
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-51519562-6', 'auto');
+		ga('send', 'pageview');
 	</script>
 </body>
 </html>

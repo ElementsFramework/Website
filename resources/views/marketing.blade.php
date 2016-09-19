@@ -5,52 +5,63 @@
 @section('content')
 
 <nav id="slide-menu" class="slide-menu" role="navigation">
-
-	<div class="brand">
-		<a href="/">
-			<img src="/assets/img/logo-white.png" height="50" alt="Elements white logo">
-		</a>
-	</div>
-
-	<ul class="slide-main-nav">
-		@include('partials.main-nav')
-	</ul>
-
+    <a class="brand" href="{{ route('home')  }}">
+        {!! svg('logo') !!}
+    </a>
+    <ul class="slide-main-nav">
+        @include('partials.main-nav')
+    </ul>
 </nav>
 
-<section class="hero">
+<section class="hero gradient-red has-text-centered display">
 	<div class="container">
 
         <div class="content">
             <h1>Solve problems. Once.</h1>
-            <p>Drag-and-drop Builder Without Limitations</p>
+            <p>Modular Drag-and-drop Framework Without Limitations</p>
         </div>
 
+        {!! svg('laptop') !!}
+	</div>
+</section>
+<section class="hero has-text-centered">
+    <div class="container">
 
-        <div class="callout rule">
+        <br><br>
+
+        <div class="divider">
             <span class="text">Coming soon!</span>
         </div>
 
-        <div class="callouts">
-            <a href="/docs/scout" class="callout minimal third">
-                <div class="callout-head">
-                    <div class="callout-title">Dynamic Routing</div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-4 is-1-mobile">
+                <div class="tile is-child notification">
+                    <p class="title">Dynamic Routing</p>
+                    <p class="content">
+                        Create routes on the go, without needing to change a single line of code.
+                    </p>
                 </div>
-                <p>Create routes on the go, without needing to change a single line of code.</p>
-            </a>
-            <a href="/docs/broadcasting" class="callout minimal third">
-                <div class="callout-head">
-                    <div class="callout-title">Layouts</div>
+            </div>
+            <div class="tile is-parent is-4 is-1-mobile">
+                <div class="tile is-child notification">
+                    <p class="title">Extendability</p>
+                    <p class="content">
+                        Create custom Elements, build features, implement designs. Easy does not mean powerless.
+                    </p>
                 </div>
-                <p>Drag-and-drop Elements to your layout and complex build applications in minutes.</p>
-            </a>
-            <a href="/docs/passport" class="callout minimal third">
-                <div class="callout-head">
-                    <div class="callout-title">Extendability</div>
+            </div>
+            <div class="tile is-parent is-4 is-1-mobile">
+                <div class="tile is-child notification">
+                    <p class="title">Layouts</p>
+                    <p class="content">
+                        Drag-and-drop Elements to your layout and complex build applications in minutes.
+                    </p>
                 </div>
-                <p>Create custom Elements, build features, integrate designs. Easy does not mean powerless.</p>
-            </a>
+            </div>
         </div>
-	</div>
+
+        <br><br>
+
+    </div>
 </section>
 @endsection

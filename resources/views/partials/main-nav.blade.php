@@ -1,3 +1,6 @@
-<li><a href="/">Home</a></li>
-<li><a href="/docs">Documentation</a></li>
-<li><a href="https://github.com/ElementsFramework">GitHub</a></li>
+<a class="nav-item" href="/">
+    Home
+</a>
+<a class="nav-item" href="/docs">
+    Documentation
+</a>

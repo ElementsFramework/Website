@@ -1,8 +1,8 @@
 
 // Colors //
 
-$color__salmon:         #e74c3c;
-$color__darker_salmon:  #c0392b;
+$color__primary:         #e74c3c;
+$color__darker_primary:  #c0392b;
 $color__faint:          #f0f2f1;
 $color__gray:           #525252;
 $color__light_gray:     #aeaeae;
@@ -13,3 +13,8 @@ $color__teal:           #27b4a8;
 
 $font:         'Source Sans Pro', sans-serif;
 $font_alt:     'Miriam Libre', 'Source Sans Pro', sans-serif;
+
+
+// Bulma Override
+$primary: $color__primary; // Update blue
+$family-sans-serif: "Source Sans Pro", sans-serif; // Add a serif family

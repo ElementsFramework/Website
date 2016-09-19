@@ -18,31 +18,40 @@
 
 	h1 + ul {
 		margin: 0;
-		padding: 0;
+		padding: 0 0 50px;
 		list-style: none;
 		font-size: 16px;
 		font-weight: bold;
 		line-height: 1.5;
-		padding-bottom: 50px;
 		border-bottom: 1px solid $color__faint;
 		-webkit-font-smoothing: antialiased;
 		li {
 			&:before {
 				content: "# ";
 				margin-right: .25em;
-				color: $color__salmon;
+				color: $color__primary;
 				opacity: .3;
 			}
 			a {
 				text-decoration: none;
+				font-size: 16px;
+				font-weight: bold;
+				line-height: 1.5;
 			}
 		}
 	}
 
 	li > ul {
-		font-size: 15px;
-		font-weight: 400;
-		list-style: none;
+		margin-left: 40px;
+
+		li {
+			list-style: none;
+		}
+		a {
+			font-size: 15px !important;
+			font-weight: 400 !important;
+			list-style: none !important;
+		}
 	}
 
 	h2:first-of-type {
@@ -66,7 +75,7 @@
 			position: absolute;
 			font-size: 28px;
 			top: 5px;
-			color: $color__salmon;
+			color: $color__primary;
 			opacity: .6;
 		}
 	}
@@ -86,12 +95,12 @@
 	a {
 		text-decoration: underline;
 		&:hover {
-			color: darken($color__salmon, 10%);
+			color: darken($color__primary, 10%);
 		}
 	}
 
 	blockquote a:hover {
-		color: lighten($color__salmon, 25%);
+		color: lighten($color__primary, 25%);
 	}
 
 	table {

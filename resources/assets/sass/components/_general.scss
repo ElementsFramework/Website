@@ -1,0 +1,17 @@
+.nav {
+  .nav-item.is-brand svg {
+    height: 30px;
+    width: auto;
+  }
+}
+
+.slide-main-nav {
+  a.nav-item {
+    color: $white;
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: $white;
+}

@@ -1,5 +1,5 @@
 new Vue({
-  el: 'nav.main',
+  el: '.search',
   data: {
     search: ''
   },
@@ -103,7 +103,7 @@ $(function() {
       footer: Hogan.compile($('#search_footer_template').html())
     };
     var $searchInput = $('#search-input');
-    var $article = $('article');
+    var $article = $('.documentation-content');
 
       // typeahead datasets
       // https://github.com/twitter/typeahead.js/blob/master/doc/jquery_typeahead.md#datasets

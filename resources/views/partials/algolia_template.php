@@ -42,7 +42,7 @@
 
 <script id="search_footer_template" type="text/template">
 	<div class="footer">
-		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+		<a target="_blank" href="https://www.algolia.com/referrals/7f7fa166/join">
 			<img width="50" src="/assets/img/algolia-logo.png">
 			<div class="powered">powered by</div>
 			<div style="clear: both"></div>

@@ -1,5 +1,5 @@
 .slide-menu {
-	background: $color__salmon;
+	background: $color__primary;
     padding: 0 20px;
     left: -70%;
     display: none;
@@ -13,7 +13,14 @@
         padding: 22px 0;
         text-align: center;
         border-bottom: 1px solid rgba(255,255,255,.25);
-        img { margin-left: -20px; }
+        display: block;
+
+        svg {
+            fill: #FFF !important;
+            width: 80%;
+            height: auto;
+        }
+        svg * { fill: #FFF !important; }
     }
 
     .slide-docs-nav > ul {
