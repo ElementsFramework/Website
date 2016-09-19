@@ -1,0 +1,2 @@
+- Standalone Components
+    - [Dynamic Routing](/docs/{{version}}/dynamic-routing)
